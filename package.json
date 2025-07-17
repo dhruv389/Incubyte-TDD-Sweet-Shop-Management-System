@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A simple sweet shop management system with IndexedDB and Jest testing",
   "main": "index.html",
- 
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
@@ -11,29 +10,45 @@
     "start": "serve ."
   },
 
-
-  "jest": {
-    "testEnvironment": "jsdom",
-    "setupFilesAfterEnv": ["<rootDir>/test/setup.js"],
-    "moduleNameMapper": {
-      "^js/(.*)$": "<rootDir>/js/$1"
-    },
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    }
+"jest": {
+  "testEnvironment": "jsdom",
+  "setupFilesAfterEnv": [
+    "<rootDir>/test/setup.js"
+  ],
+  "moduleNameMapper": {
+    "^js/(.*)$": "<rootDir>/js/$1"
   },
+  "transform": {
+    "^.+\\.js$": "babel-jest"
+  },
+  "reporters": [
+    "default",
+    ["jest-html-reporter", {
+      "pageTitle": "Sweet Shop Test Report",
+      "outputPath": "./test-report.html",
+      "includeFailureMsg": true,
+      "includeConsoleLog": true
+    }]
+  ]
+},
 
-  
-  "keywords": ["sweet-shop", "management", "indexeddb", "jest"],
+
+  "keywords": [
+    "sweet-shop",
+    "management",
+    "indexeddb",
+    "jest"
+  ],
   "author": "Sweet Shop Team",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
     "babel-jest": "^29.0.0",
-    "jest": "^29.0.0",
-    "jest-environment-jsdom": "^29.0.0",
     "fake-indexeddb": "^4.0.2",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.0.0",
+    "jest-html-reporter": "^4.3.0",
     "serve": "^14.0.0"
   }
 }
