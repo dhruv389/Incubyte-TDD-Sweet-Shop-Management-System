@@ -1,4 +1,5 @@
-const {DatabaseManager} = require('../src/DatabaseManager');
+// const {DatabaseManager} = require('../src/DatabaseManager');
+import { DatabaseManager } from '../src/DatabaseManager.js';
 
 describe('DatabaseManager', () => {
     let dbManager;
