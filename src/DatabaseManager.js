@@ -4,6 +4,8 @@ export class DatabaseManager {
         this.version = 1;
         this.db = null;
     }
+    // Initializes the IndexedDB database
+    // Creates the 'sweets' object store with indexes for name, category, and price
 
     async init() {
         return new Promise((resolve, reject) => {
@@ -27,6 +29,8 @@ export class DatabaseManager {
         });
     }
 
+    // Adds a new sweet to the database
+
     async addSweet(sweet) {
         const transaction = this.db.transaction(['sweets'], 'readwrite');
         const store = transaction.objectStore('sweets');
@@ -36,7 +40,8 @@ export class DatabaseManager {
             request.onerror = () => reject(request.error);
         });
     }
-
+    
+// Updates an existing sweet in the database
     async updateSweet(sweet) {
         const transaction = this.db.transaction(['sweets'], 'readwrite');
         const store = transaction.objectStore('sweets');
