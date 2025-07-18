@@ -59,26 +59,26 @@ npm run test:coverage  # Generate coverage report
 
 ---
 
-cat > README.md << 'EOF'
+
 ## 📊 Test Report
 
 After running tests with `jest-html-reporter`, open the following file in your browser to view a detailed HTML test report:
 
-test-report.html
+`test-report.html`
 
 ---
 
 ## 📸 Front-End
 
-A basic front-end interface is available at:
-index.html
+A basic front-end interface is available at :
+`index.html`
 
----
+
 
 ### 👉 To view the front-end using Live Server:
 
 1. Open the project folder in **VS Code**
-2. Right-click on `frontend/index.html`
+2. Right-click on `index.html`
 3. Click **"Open with Live Server"**
 4. The page will open in your browser at:  
 http://127.0.0.1:5500/index.html
@@ -88,6 +88,7 @@ http://127.0.0.1:5500/index.html
 💡 **Make sure you have the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension installed in VS Code.**
 EOF
 
+---
 
 ## 🧾 Project Structure
 
